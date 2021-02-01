@@ -1,0 +1,4 @@
+E:/cpp_workshop/Lesson2/build/CMakeFiles/edit_cache.dir
+E:/cpp_workshop/Lesson2/build/CMakeFiles/example1.dir
+E:/cpp_workshop/Lesson2/build/CMakeFiles/example2.dir
+E:/cpp_workshop/Lesson2/build/CMakeFiles/rebuild_cache.dir
