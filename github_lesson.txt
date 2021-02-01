@@ -1,0 +1,79 @@
+Repository:
+	Depo, veri deposu, veri havuzu
+
+	* Projenin bütün dosya ve klasörlerini içinde tutan veritabanı gibi düşünülebilir. Her bir proje, Github'da bir repository olarak tutulabilir. Sadece dosyalar değil, dosyalarda yapılan değişikliklerin geçmişide tutulur.
+	* Bir repository birden fazla kullanıcı arasında paylaşılabilir ve kopyalanabilir.
+
+Branch:
+	dal, şube, ayırmak
+
+	* Projeye yeni bir özellik eklemek istediğinde ya da değişiklik yapılacağı zaman, yeni bir branch açılır ve bütün değişklikler bu branch üzerinden yapıldıktan sonra master branch ile birleştirilir.
+
+Fork:
+	çatal, çatallamak
+
+	* Başka birisine ait bir ropesitory üzerinde çalışmak istediğinizde projeyi kendi Github hesabınıza kopyalamak için onu fork edebilirsiniz. Fork edilen projeler, projenin aslında bir güncelleme olduğunda bu değişiklikten etkilenmez.
+
+Clone:
+	Kopyalamak, klonlamak
+
+	* Bir projeyi bilgisayarınıza indirmek istediğinizde clone komutunu kullanabilirsiniz. Terminal'e
+	>> git clone https://github.com/..............
+	yazıp gönderdiğinizde, github isimli proje, o an bulunduğunuz dizinde kopyalanacaktır.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+git status:
+	Repository'nin mevcut durumunu gösterir.
+	>> git status
+
+git add .:
+	Bu komut değişen bütün dosyaları Github'a göndermek üzere hazırlar (staging). En sonda ki nokta, tüm dosyaları ifade eder. Buraya nokta yerine klasör veya dosya ismide yazılabilir.
+
+git commit -m [commit mesajı]
+	Bu komut ile, bir önceki aşamada hazırlanan değişiklikler, bir mesaj ile birlikte yereldeki (localhost) repository'e kaydedilir. Mesaj kısmı, projede yapılan değişiklikleri açıklayıcı olmalıdır.
+	>> git commit -m "Bir değişiklik yapıldı."
+
+git push origin [branch ismi]
+	Bu komut ile, yerelde hazırlanıp kaydedilen değişiklikler, Github'daki repository'e gönderilir.
+
+git checkout -b [branch ismi]
+	Belirtilen isimle yeni bir branch oluşturur.
+
+git checkout [branch ismi]
+	Belirtiren isimle branch'a geçiş yapar.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+>>git init:
+	Projenin git projesi haline gelmesini sağlar veya hazırlar.
+
+>>git add .
+	Dosyalar geçiş bölgesindedir.
+
+>>git commit -m "git test uygulaması"
+	Mevcut kopya oluşturuldu.
+
+>>git log
+	alınan versiyonları listelemek için
+
+>>git diff
+	dosya içerisinde olan farklılıklar
+
+>>git add/rm [dosya ismi]
+	dosya silme işlemi
+
+>>git rm -r [klasör ismi]
+	Klasör silme işlemi
+
+>>git mv [eski isim] [yeni isim]
+	Dosya ismi değiştirme
+
+>>git mv [taşınmak istenilen dosya ismi] [taşınacak yol ismi]
+	Dosya taşıma işlemi
+
+>>git remote add [takma isim] [adres bilgisi]
+	github adresini belirleme
+
+>>git push -u [takma isim] master 
