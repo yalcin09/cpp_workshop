@@ -137,6 +137,7 @@ int main(){
 
 
 */
+/*
 #include <iostream>
 
 using namespace std;
@@ -162,4 +163,155 @@ int main(){
 
 	return 0;
 }
+*/
 //trial4
+////////
+////////
+//trial5
+/*
+#include <iostream>
+
+using namespace std;
+
+#define SIZE1 3
+
+int main(){
+
+
+	int a[3] = {1,2,3};
+
+	int *a_ptr;  // address
+
+	a_ptr = a;
+
+	// Display
+
+	for(int i=0; i<SIZE1; i++)
+		cout << "a[" << i << "] : " << a_ptr[i] << endl;
+	
+	cout << "Address of a[] : " << a << endl;
+	cout << "Address of a_ptr[] : " << a_ptr << endl;
+
+
+	//different type
+	double b = 5.2;
+	double *b_ptr;
+
+	b_ptr = &b;
+
+	cout << "Address of b[] : " << &b << endl;
+	cout << "Address of b_ptr[] : " << b_ptr << endl;
+	return 0;
+}
+*/
+//trial5
+////////
+////////
+////////////////////////////////////////////////////////////////////
+//ptr
+/*
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	
+	int counts[3] = {100, 200, 150}; // 12 bytes
+
+	int * counts_ptr;
+
+	counts_ptr = counts;
+
+	for(int i=0;i<3;i++){
+		cout << "counts[" << i << "] : " << counts[i] << endl;
+		cout << "counts[" << i << "] : " << *(counts + i) << endl;
+		cout << "address of counts : " << &counts[i] << endl;
+		cout << "address of counts : " << (counts + i) << endl;
+		cout << "*************************************************" << endl;
+		cout << "address of counts_ptr : " << (counts_ptr + i) << endl;
+		
+	}
+
+	cout << "*************************************************" << endl;
+	cout << "*************************************************" << endl;
+	cout << "*************************************************" << endl;
+
+	int a = 5;
+	double b = 5.2;
+
+	int *a_ptr = &a;
+	double *b_ptr = &b;
+
+	cout << "a_ptr : " << a_ptr << endl;
+	//cout << "a_ptr * 1 : " << << a_ptr * 1 << endl; --> wrong
+
+	cout << "b_ptr : " << b_ptr << endl;
+	//cout << "b_ptr * 1 : " << b_ptr * 2 << endl; --> wrong
+
+	return 0;
+}
+*/
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+// pointer-array to function usage
+
+#include <iostream>
+
+using namespace std;
+
+#define SIZE 3
+
+//Function declaration
+/*
+(1)
+void initializeArray(int *a, int size);
+void displayArray(int *a, int size);
+
+(2)
+void initializeArray(int a[SIZE], int size);
+void displayArray(int a[SIZE], int size);
+
+(3)
+void initializeArray(int a[], int size);
+void displayArray(int a[], int size);
+*/
+
+void initializeArray(int *a, int size);
+void displayArray(int *a, int size);
+double meanArray(int *a, int size);
+
+int main()
+{
+	
+	int a[SIZE];
+
+	initializeArray(a,SIZE);
+	displayArray(a,SIZE);
+
+	cout << "meanValue : " <<  meanArray(a,SIZE) << endl;
+
+	return 0;
+}
+
+void initializeArray(int *a, int size){
+	for(int i=0; i<size; i++)
+		a[i] = i;
+}
+
+void displayArray(int *a, int size){
+	for(int i=0; i<size; i++)
+		cout << "a[" << i << "] : " << a[i] << endl;
+}
+
+double meanArray(int *a, int size){
+	double sum = 0;
+
+	for(int i=0; i<size; i++){
+		sum += *(a + 1);
+	}
+
+	return (sum / size);
+}
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
