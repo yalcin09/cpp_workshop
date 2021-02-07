@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/MySolver.hpp
+
+E:/cpp_workshop/Lesson9/src/main.cpp
+iostream
+-
+MySolver.hpp
+-
+
